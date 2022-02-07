@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>First HTML</title>
+    </head>
+    <body>
+        <h1>Sneha Bedadhala </h1>
+        <h6> Chick-fil-A </h6>
+        <p> I love <b>chicken nuggets</b> at Chick-fil-A. It is located at NWMSU. I also like bagels at Einstein Bro's Bagels next to Chick-fil-A. </p>
+        <hr>
+        <h1>Closest Airport and Directions</h1>
+        <p>Closest airpot to Chick-fil-A is MCI International Airport.<br>Directions to Chick-fil-A from MCI:</p>
+        <ol>
+            <li>From MCI Airport take I-29N towards St. Joseph.</li>
+            <li>Continue on I-29 and take US-71N towards Maryville.</li>  
+            <li>Once you enter Maryville, Turn left onto S Hills Dr and continue for 1 mile.</li>
+            <li>Then, turn right onto College Ave.</li>  
+            <li>Follow directions for NWMSU Studedent Union.</li>  
+            <li> Chick-fil-A is located inside Student Union.</li>  
+        </ol>
+        <p>Recommended Items at Chick-fil-A:</p>
+        <ul>
+            <li>Chicken Nuggets</li>
+            <li>Spicy Chicken Sandwich</li>
+            <li>Southwest Chicken Salad</li>
+        </ul>
+        <a href="aboutme.html"> About Me</a>
+        <hr>
+        <h1>Sports/Activity Section</h1>
+        <p>Below are the details of the Sports/Activity I would like to recommend. The details include the name of the Activity, Location where you could do the Activity and the amount required to perform the Activity.</p>
+        <style>
+            table {
+              font-family: arial, sans-serif;
+              border-collapse: collapse;
+              width: 50%;
+            }
+            td, th {
+                border: 1px solid #dddddd;
+              text-align: left;
+              padding: 8px;
+            }
+        </style>
+        <table>
+            <tr>
+                <th> Sport/Activity </th>
+                <th> Location </th>
+                <th> Expenses </th>
+            </tr>
+            <tr>
+                <td> Hiking </td>
+                <td> Mozingo Lake Recreation Park	 </td>
+                <td>  $0 </td>   
+            </tr>
+            <tr>
+                <td> Amusement Park	 </td>
+                <td> Worlds of Fun, Kansas City, MO	 </td>
+                <td>  $100 </td>   
+            </tr>
+            <tr>
+                <td> Golf </td>
+                <td> TopGolf, Kansas City, MO </td>
+                <td>  $100 </td>   
+            </tr>
+            <tr>
+                <td> Bowling </td>
+                <td> BearCat Lanes, Maryville, MO	 </td>
+                <td>  $30 </td>   
+            </tr>
+        </table>
+        <hr>
+        <h1>Code</h1>
+        <blockquote cite="https://en.wikipedia.org/wiki/Graph_traversal"> In computer science, graph traversal (also known as graph search) refers to the process of visiting (checking and/or updating) each vertex in a graph. Such traversals are classified by the order in which the vertices are visited. Tree traversal is a special case of graph traversal.</blockquote >
+        <p>Source: <a href="https://en.wikipedia.org/wiki/Graph_traversal"> wikipedia</a></p>
+        <style>
+        pre code {
+            background-color: #eee;
+            border: 1px solid #eee;
+            display: block;
+            padding: 10px;
+        }
+        </style>
+        <pre> 
+            <code>
+            vector<vector<int>> adj;  // adjacency list representation
+            int n; // number of nodes
+            int s; // source vertex
+            
+            queue<int> q;
+            vector<bool> used(n);
+            vector<int> d(n), p(n);
+            
+            q.push(s);
+            used[s] = true;
+            p[s] = -1;
+            while (!q.empty()) {
+                int v = q.front();
+                q.pop();
+                for (int u : adj[v]) {
+                    if (!used[u]) {
+                        used[u] = true;
+                        q.push(u);
+                        d[u] = d[v] + 1;
+                        p[u] = v;
+                    }
+                }
+            }
+        </code>
+        </pre>  
+                
+    </body>
+</html>
